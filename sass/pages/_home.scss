@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+.select-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: $main-color;
+}
+.main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  padding: 10rem 2rem 5rem 10rem;
+}
+.tasks-container {
+  position: relative;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__img" src="./assets/logo.svg" alt="logo" />
+      </div>
+      <div class="header__title">
+        <span class="header__task-name header__task-name--active">Task 2</span>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="select-box">
+          <form class="task-form" id="taskForm">
+            <div class="task-form__container">
+              <div id="optionsContainer" class="options-container">
+                <div class="option">
+                  <input type="text" class="radio" id="employee1" name="employee" />
+                  <label for="employee1">Adam Nowak</label>
+                  <img src="./assets/employee1.png" alt="employee" />
+                </div>
+                <div class="option">
+                  <input type="text" class="radio" id="employee2" name="employee" />
+                  <label for="employee2">Michał Potoczek</label>
+                  <img src="./assets/employee2.png" alt="employee" />
+                </div>
+                <div class="option">
+                  <input type="text" class="radio" id="employee3" name="employee" />
+                  <label for="employee3">Antoni Worek</label>
+                  <img src="./assets/employee3.png" alt="employee" />
+                </div>
+              </div>
+
+              <div class="selected">Pracownik</div>
+              <div class="search-box">
+                <input type="text" placeholder="Szukaj" />
+              </div>
+            </div>
+            <label id="employee__input-error" class="task-form__label--error">Proszę wybrać pracownika</label>
+            <textarea
+              name="task-desctiptnio"
+              id="taskDesctiptnio"
+              rows="10"
+              class="task-form__textarea"
+              placeholder="Zadanie"
+            ></textarea>
+            <label id="task__text-error" class="task-form__label--error"
+              >Treść zadania ma być większa niż 2 znaki</label
+            >
+            <input type="submit" value="DODAJ" class="task-form__btn" />
+          </form>
+        </div>
+        <div class="main-content">
+          <div class="filter">
+            <button class="filter__button" data-status="all">POKAŻ WSZYSTKIE</button>
+            <button class="filter__button" data-status="completed">POKAŻ UKOŃCZONE</button>
+            <button class="filter__button" data-status="incompleted">POKAŻ NIEUKOŃCZONE</button>
+          </div>
+          <div class="tasks-container">
+            <div class="tasks"></div>
+            <div class="task-counter">
+              <div class="task-counter__headline">Podsumowanie</div>
+              <div class="task-counter__detail">
+                <div class="task-counter__title">Wszystkie zadania:</div>
+                <div class="task-counter__number all-task">25</div>
+              </div>
+              <div class="task-counter__detail">
+                <div class="task-counter__title">Ukończone zadania:</div>
+                <div class="task-counter__number complete-task"></div>
+              </div>
+              <div class="task-counter__detail">
+                <div class="task-counter__title">Nieukończone zadania:</div>
+                <div class="task-counetr__number incomplete-task"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

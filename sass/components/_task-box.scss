@@ -1,0 +1,71 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+.task {
+  position: relative;
+  background-color: $main-color;
+  width: 58rem;
+  min-height: 19rem;
+  margin-bottom: 3rem;
+  padding: 2rem 5rem 2rem 2rem;
+
+  &__done {
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    top: 0.5rem;
+    padding: 1rem;
+    font-size: 3rem;
+  }
+  &__done.task-done {
+    i {
+      color: #01df32;
+    }
+  }
+  &__delete {
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+  .fa-trash,
+  .fa-check-circle {
+    pointer-events: none;
+  }
+
+  &__receiver {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &__img {
+    margin-right: 1rem;
+    img {
+      border-radius: 100%;
+      width: 3rem;
+      height: auto;
+    }
+  }
+  &__name {
+    font-size: 1.8rem;
+  }
+  &__date {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  &__descriptnion {
+    font-size: 1.3rem;
+  }
+}
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}

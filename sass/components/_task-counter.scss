@@ -1,0 +1,24 @@
+.task-counter {
+  position: fixed;
+  top: 25rem;
+  left: 80%;
+  background-color: $main-color;
+  width: 23rem;
+  height: 16rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &__headline {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0 2rem 0rem;
+  }
+  &__detail {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+}

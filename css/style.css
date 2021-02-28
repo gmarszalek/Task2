@@ -1,0 +1,449 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container-fluid {
+  width: 100vw;
+}
+
+.header {
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+  height: 7rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.header__logo {
+  padding: 1rem;
+}
+
+.header__title {
+  margin-left: auto;
+  margin-right: 25%;
+}
+
+.header__task-name {
+  font-size: 2.4rem;
+  margin-right: 5rem;
+}
+
+.header__task-name--active {
+  color: #987700;
+}
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.filter__button {
+  border: none;
+  outline: none;
+  background: none;
+  margin-right: 5rem;
+  font-size: 1.4rem;
+  width: 19.5rem;
+  padding: 1.5rem 1rem;
+  background-color: #ffdc64;
+  cursor: pointer;
+}
+
+.tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task {
+  position: relative;
+  background-color: #f0f0f0;
+  width: 58rem;
+  min-height: 19rem;
+  margin-bottom: 3rem;
+  padding: 2rem 5rem 2rem 2rem;
+}
+
+.task__done {
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  top: 0.5rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.task__done.task-done i {
+  color: #01df32;
+}
+
+.task__delete {
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.task .fa-trash,
+.task .fa-check-circle {
+  pointer-events: none;
+}
+
+.task__receiver {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.task__img {
+  margin-right: 1rem;
+}
+
+.task__img img {
+  border-radius: 100%;
+  width: 3rem;
+  height: auto;
+}
+
+.task__name {
+  font-size: 1.8rem;
+}
+
+.task__date {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.task__descriptnion {
+  font-size: 1.3rem;
+}
+
+.fall {
+  -webkit-transform: translateY(10rem) rotateZ(20deg);
+          transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.task-counter {
+  position: fixed;
+  top: 25rem;
+  left: 80%;
+  background-color: #f0f0f0;
+  width: 23rem;
+  height: 16rem;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task-counter__headline {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0 2rem 0rem;
+}
+
+.task-counter__detail {
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.task-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 27.5rem;
+  margin: 25rem auto;
+}
+
+.task-form__select, .task-form__textarea, .task-form__btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  -webkit-box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+}
+
+.task-form__textarea:focus {
+  border: solid 1px #0075ff;
+}
+
+.task-form__textarea.invalid {
+  border: solid 1px #ff000f;
+}
+
+.task-form__select {
+  background-color: #f0f0f0;
+}
+
+.task-form__textarea {
+  background-color: #f0f0f0;
+  margin-bottom: 2rem;
+}
+
+.task-form__btn {
+  background-color: #ffdc64;
+  cursor: pointer;
+}
+
+.task-form__label--error {
+  display: none;
+  color: #ff000f;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.task-form__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+}
+
+.select-box .options-container {
+  background: #f0f0f0;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.selected {
+  background: #f0f0f0;
+  border-radius: 8px;
+  color: #575757;
+  position: relative;
+  font-size: 1.4rem;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selected.invalid {
+  border: solid 1px #ff000f;
+}
+
+.selected::after {
+  content: "";
+  background: url("../assets/arrow_down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 1.5rem;
+  right: 1rem;
+  top: 1.3rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 30rem;
+  opacity: 1;
+  overflow-y: scroll;
+  margin-top: 5.4rem;
+}
+
+.select-box .options-container.active + .selected::after {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  top: -1.3rem;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 0.8rem;
+  background: #f0f0f0;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+  border-radius: 0 8px 8px 0;
+}
+
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select-box .option,
+.selected {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.select-box .option img,
+.selected img {
+  border-radius: 100%;
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.option.active {
+  color: #004c8a;
+  font-weight: 600;
+}
+
+.select-box .option:hover {
+  background: #fff;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-box input {
+  width: 97%;
+  margin: auto;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  position: absolute;
+  border-radius: 0.5rem;
+  z-index: 100;
+  border: 5px solid #f0f0f0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.select-box .options-container.active ~ .search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  padding: 10rem 2rem 5rem 10rem;
+}
+
+.tasks-container {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */
